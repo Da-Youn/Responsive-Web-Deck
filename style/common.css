@@ -1,0 +1,75 @@
+/* font-family: 'Oswald', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+/* font-family: 'Lato', sans-serif; - 400, 700*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@500&display=swap');
+
+:root {
+  --main-color: #ff565c;
+  --sub-color: #1d1f24;
+}
+
+body {
+  color: #1d1f24;
+}
+
+body,
+h1,
+h2,
+ol,
+ul,
+figure,
+button {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+input,
+p {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: 0;
+}
+
+button {
+  font-size: 14px;
+  border: 0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: none;
+  font-family: 'Oswald', sans-serif;
+  color: #1d1f24;
+}
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 접근성을 위한 숨김처리 */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

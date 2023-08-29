@@ -1,0 +1,114 @@
+/** 가로 해상도가 768px 이상 */
+@media (min-width: 768px) {
+  main {
+    padding: 20px 20px 100px;
+    display: grid;
+    grid-template-areas:
+      'first-card first-card'
+      'chart-box card-box1'
+      'chart-box card-box2'
+      'banner-box banner-box'
+      'card-box3 card-box4';
+  }
+  main .chart-box {
+    grid-area: chart-box;
+  }
+
+  main .first-card {
+    position: relative;
+    grid-area: first-card;
+  }
+  main .first-card::before,
+  main .first-card::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  main .first-card::before {
+    left: 0;
+    background-image: url('./img/left-icon.svg');
+  }
+  main .first-card::after {
+    right: 0;
+
+    background-image: url('./img/right-icon.svg');
+  }
+
+  main .banner-box {
+    grid-area: banner-box;
+  }
+
+  footer {
+    padding: 50px 20px;
+    grid-template-areas:
+      'figure menu-links menu-links'
+      'contact-box contact-box contact-box';
+    row-gap: 45px;
+  }
+
+  footer .contact-box {
+    flex-direction: row;
+    align-items: end;
+    margin: 0;
+  }
+  footer .menu-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/** 가로 해상도가 1440px 이상 */
+@media (min-width: 1440px) {
+  header div {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  header nav {
+    display: block;
+    width: 100%;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    color: var(--sub-color);
+  }
+  header nav a {
+    opacity: 0.2;
+  }
+  header nav a:hover,
+  header nav a:focus {
+    opacity: 1;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas:
+      'first-card first-card first-card card-box1'
+      'first-card first-card first-card banner-box'
+      'chart-box card-box2 card-box2 banner-box'
+      'chart-box card-box3 card-box4 card-box5';
+  }
+
+  main .card2 {
+    grid-area: card-box2;
+  }
+
+  footer {
+    padding: 50px 40px 40px;
+    grid-template-areas: 'figure menu-links menu-links contact-box';
+    align-items: center;
+  }
+
+  footer .contact-box {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  footer .menu-links {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
